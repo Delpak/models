@@ -16,7 +16,19 @@ limits:
     max_input_tokens: 1000000
     max_output_tokens: 8192
 features:
-    [function_calling, parallel_function_calling, vision, chat, image, pdf, doc]
+    [
+        function_calling,
+        parallel_function_calling,
+        vision,
+        chat,
+        image,
+        pdf,
+        doc,
+        tools,
+        system_messages,
+        tool_choice,
+        response_schema,
+    ]
 params:
     - key: max_tokens
       maxValue: 4096

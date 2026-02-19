@@ -17,5 +17,9 @@ features:
         audio_input,
         audio_output,
         chat,
+        system_messages,
+        tool_choice,
+        prompt_caching,
+        response_schema,
     ]
 mode: chat

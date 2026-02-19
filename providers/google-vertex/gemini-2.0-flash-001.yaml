@@ -18,6 +18,11 @@ features:
         image,
         pdf,
         doc,
+        tools,
+        system_messages,
+        tool_choice,
+        prompt_caching,
+        response_schema,
     ]
 params:
     - key: max_tokens

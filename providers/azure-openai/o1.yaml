@@ -8,7 +8,16 @@ limits:
     max_tokens: 4096
     max_input_tokens: 200000
     max_output_tokens: 100000
-features: [function_calling, parallel_function_calling, vision, chat, image]
+features:
+    [
+        function_calling,
+        parallel_function_calling,
+        vision,
+        chat,
+        image,
+        tool_choice,
+        prompt_caching,
+    ]
 messages:
     options:
         - user

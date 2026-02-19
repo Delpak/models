@@ -8,7 +8,17 @@ limits:
     max_tokens: 4096
     max_input_tokens: 128000
     max_output_tokens: 16384
-features: [vision, chat, image]
+features:
+    [
+        vision,
+        chat,
+        image,
+        tools,
+        system_messages,
+        prompt_caching,
+        response_schema,
+        pdf_input,
+    ]
 params:
     - key: max_completion_tokens
       defaultValue: 20000

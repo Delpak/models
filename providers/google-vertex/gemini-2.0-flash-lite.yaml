@@ -19,5 +19,10 @@ features:
         image,
         pdf,
         doc,
+        tools,
+        system_messages,
+        tool_choice,
+        prompt_caching,
+        response_schema,
     ]
 mode: chat

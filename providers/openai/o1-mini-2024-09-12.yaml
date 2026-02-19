@@ -8,7 +8,7 @@ limits:
     max_tokens: 4096
     max_input_tokens: 128000
     max_output_tokens: 65536
-features: [vision, chat]
+features: [vision, chat, tools, prompt_caching, pdf_input]
 messages:
     options:
         - user

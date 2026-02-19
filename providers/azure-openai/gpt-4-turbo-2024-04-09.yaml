@@ -6,7 +6,16 @@ costs:
 limits:
     max_input_tokens: 128000
     max_output_tokens: 4096
-features: [function_calling, parallel_function_calling, vision, chat, image]
+features:
+    [
+        function_calling,
+        parallel_function_calling,
+        vision,
+        chat,
+        image,
+        tools,
+        tool_choice,
+    ]
 params:
     - key: max_tokens
       maxValue: 4096

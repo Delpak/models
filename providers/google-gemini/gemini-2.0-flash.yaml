@@ -13,7 +13,20 @@ costs:
 limits:
     max_input_tokens: 1048576
     max_output_tokens: 8192
-features: [function_calling, vision, audio_input, audio_output, chat, image]
+features:
+    [
+        function_calling,
+        vision,
+        audio_input,
+        audio_output,
+        chat,
+        image,
+        tools,
+        system_messages,
+        tool_choice,
+        prompt_caching,
+        response_schema,
+    ]
 params:
     - key: max_tokens
       maxValue: 8192
