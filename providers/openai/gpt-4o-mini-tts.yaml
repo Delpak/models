@@ -8,8 +8,9 @@ features:
     - audio_output
 limits:
     max_input_tokens: 2000
-    max_tokens: 4096
 mode: audio_speech
 model: gpt-4o-mini-tts
 sources:
     - https://developers.openai.com/api/docs/models/gpt-4o-mini-tts
+    - https://developers.openai.com/api/docs/guides/text-to-speech
+    - https://developers.openai.com/api/docs/pricing

@@ -9,7 +9,7 @@ features:
     - parallel_function_calling
     - vision
     - chat
-    - image
+    - image_input
     - tools
     - system_messages
     - tool_choice
