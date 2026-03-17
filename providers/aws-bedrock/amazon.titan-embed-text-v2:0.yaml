@@ -48,6 +48,13 @@ limits:
     output_vector_size: 1024
 mode: embedding
 model: amazon.titan-embed-text-v2:0
+removeParams:
+    - max_tokens
+    - temperature
+    - top_p
+    - "n"
+    - stop
+    - stream
 sources:
     - https://docs.aws.amazon.com/bedrock/latest/userguide/titan-embedding-models.html
     - https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-embed-text.html

@@ -16,10 +16,25 @@ costs:
 features:
     - function_calling
     - vision
+    - prompt_caching
+    - tool_choice
+    - system_messages
+    - assistant_prefill
 limits:
+    context_window: 200000
     max_input_tokens: 200000
     max_output_tokens: 64000
     max_tokens: 64000
     tool_use_system_prompt_tokens: 346
 mode: chat
 model: au.anthropic.claude-haiku-4-5-20251001-v1:0
+params:
+    - defaultValue: 512
+      key: max_tokens
+      maxValue: 64000
+      minValue: 1
+sources:
+    - https://platform.claude.com/docs/en/docs/about-claude/models
+    - https://platform.claude.com/docs/en/about-claude/pricing
+    - https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html
+thinking: true
