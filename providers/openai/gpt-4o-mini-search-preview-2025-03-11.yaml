@@ -7,7 +7,6 @@ features:
     - structured_output
 limits:
     context_window: 128000
-    max_input_tokens: 111616
     max_output_tokens: 16384
     max_tokens: 16384
 mode: chat
@@ -17,4 +16,3 @@ removeParams:
     - parallel_tool_calls
 sources:
     - https://developers.openai.com/docs/models/gpt-4o-mini-search-preview
-    - https://developers.openai.com/docs/deprecations
