@@ -4,11 +4,13 @@ costs:
       region: "*"
 features:
     - function_calling
+    - structured_output
     - json_output
     - tool_choice
 limits:
     context_window: 262144
     max_output_tokens: 32768
+    max_tokens: 32768
 modalities:
     input:
         - image
@@ -25,4 +27,6 @@ params:
       key: top_p
     - defaultValue: 64
       key: top_k
+sources:
+    - https://openrouter.ai/google/gemma-4-31b-it:free/api
 thinking: true

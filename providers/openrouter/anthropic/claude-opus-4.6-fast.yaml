@@ -6,13 +6,15 @@ costs:
       region: "*"
 features:
     - function_calling
-    - json_output
+    - system_messages
+    - tool_choice
     - prompt_caching
     - structured_output
-    - tool_choice
+    - json_output
 limits:
     context_window: 1000000
     max_output_tokens: 128000
+    max_tokens: 128000
 modalities:
     input:
         - text
@@ -21,4 +23,11 @@ modalities:
         - text
 mode: chat
 model: anthropic/claude-opus-4.6-fast
+params:
+    - defaultValue: 128000
+      key: max_tokens
+      maxValue: 128000
+      minValue: 1
+sources:
+    - https://openrouter.ai/anthropic/claude-opus-4.6-fast/api
 thinking: true
