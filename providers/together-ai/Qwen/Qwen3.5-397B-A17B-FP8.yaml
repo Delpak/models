@@ -20,5 +20,6 @@ model: Qwen/Qwen3.5-397B-A17B-FP8
 provisioning: provisioned
 sources:
     - https://docs.together.ai/docs/json-mode
+    - https://docs.together.ai/docs/function-calling
 supportedModes:
     - chat
