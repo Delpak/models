@@ -140,6 +140,7 @@ package model
 #CostWithRegion: {
 	region: "*" | #AWSRegion | #GCPRegion | #AzureRegion | #VertexRegion
 	#Cost
+	priority_pricing?: #Cost
 }
 
 // Supported feature flags a model can declare
