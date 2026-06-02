@@ -5,6 +5,7 @@ costs:
 modalities:
     input:
         - text
+        - image
     output:
         - video
 mode: video
