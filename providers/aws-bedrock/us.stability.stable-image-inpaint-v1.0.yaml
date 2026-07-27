@@ -23,8 +23,10 @@ removeParams:
     - "n"
     - stop
     - stream
+    - reasoning_effort
 sources:
     - https://docs.aws.amazon.com/bedrock/latest/userguide/stable-image-services.html
+    - https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-stability-ai-stable-image-inpaint.html
 status: active
 supportedModes:
     - image

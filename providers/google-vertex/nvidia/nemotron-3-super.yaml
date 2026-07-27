@@ -1,3 +1,13 @@
+features:
+    - function_calling
+    - parallel_function_calling
+    - tool_choice
+    - structured_output
+    - json_output
+    - system_messages
+limits:
+    context_window: 1000000
+    max_output_tokens: 65536
 modalities:
     input:
         - text
@@ -5,9 +15,12 @@ modalities:
         - text
 mode: chat
 model: nvidia/nemotron-3-super
+provisioning: provisioned
 sources:
     - https://research.nvidia.com/labs/nemotron/Nemotron-3-Super/
     - https://console.cloud.google.com/vertex-ai/publishers/nvidia/model-garden/nemotron-3-super
+    - https://developer.nvidia.com/blog/introducing-nemotron-3-super-an-open-hybrid-mamba-transformer-moe-for-agentic-reasoning/
+    - https://blogs.nvidia.com/blog/nemotron-3-super-agentic-ai/
 status: active
 supportedModes:
     - chat

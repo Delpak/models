@@ -8,6 +8,7 @@ costs:
 features:
     - function_calling
     - structured_output
+    - prompt_caching
 limits:
     context_window: 163840
     max_output_tokens: 32768
@@ -15,7 +16,6 @@ limits:
 modalities:
     input:
         - text
-        - doc
     output:
         - text
 mode: chat

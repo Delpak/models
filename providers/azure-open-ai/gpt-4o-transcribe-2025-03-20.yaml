@@ -1,9 +1,8 @@
 costs:
-    - input_cost_per_audio_token: 0.000006
+    - input_cost_per_audio_token: 0.0000025
       input_cost_per_token: 0.0000025
       output_cost_per_token: 0.00001
       region: "*"
-deprecationDate: "2026-06-01"
 limits:
     max_input_tokens: 16000
     max_output_tokens: 2000
@@ -15,6 +14,7 @@ modalities:
         - text
 mode: audio_transcription
 model: gpt-4o-transcribe-2025-03-20
+provisioning: serverless
 removeParams:
     - max_tokens
     - temperature
@@ -25,8 +25,8 @@ removeParams:
     - stream
     - tool_choice
     - parallel_tool_calls
-sources:
-    - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whisper-quickstart
-status: preview
+    - reasoning_effort
+retirementDate: "2026-10-15"
+status: active
 supportedModes:
     - audio_transcription

@@ -6,6 +6,7 @@ costs:
     - output_cost_per_image: 0.06
       region: ap-northeast-1
 deprecationDate: "2026-09-30"
+isDeprecated: true
 modalities:
     input:
         - text
@@ -14,17 +15,19 @@ modalities:
         - image
 mode: image
 model: amazon.nova-canvas-v1:0
+provisioning: serverless
 removeParams:
     - max_tokens
     - temperature
     - top_p
-    - "n"
+    - n
     - stop
     - stream
 sources:
     - https://docs.aws.amazon.com/nova/latest/userguide/image-gen-req-resp-structure.html
     - https://docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html
     - https://docs.aws.amazon.com/nova/latest/userguide/image-gen-access.html
-status: active
+    - https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-canvas.html
+status: deprecated
 supportedModes:
     - image

@@ -5,16 +5,18 @@ modalities:
     input:
         - text
         - image
-        - audio
     output:
         - video
         - audio
 mode: video
 model: google/veo-3.0-fast-audio
 provisioning: serverless
+removeParams:
+    - reasoning_effort
 sources:
     - https://docs.together.ai/docs/videos-overview
     - https://docs.together.ai/reference/create-videos
+    - https://www.together.ai/models/google-veo-3-0-fast-audio
 status: active
 supportedModes:
     - video

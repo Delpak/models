@@ -1,3 +1,5 @@
+limits:
+    max_input_tokens: 400000 # Total request limit per Contextual AI API docs
 modalities:
     input:
         - text
@@ -5,6 +7,7 @@ modalities:
         - text
 mode: rerank
 model: contextualai/rerank-v2-instruct
+provisioning: provisioned
 removeParams:
     - max_tokens
     - temperature
@@ -17,6 +20,8 @@ sources:
     - https://docs.contextual.ai/api-reference/rerank/rerank
     - https://docs.contextual.ai/how-to-guides/rerank
     - https://docs.contextual.ai/integration/platforms
+    - https://console.cloud.google.com/vertex-ai/publishers/contextualai/model-garden/rerank-v2-instruct
+    - https://cloud.google.com/blog/products/ai-machine-learning/new-proprietary-models-vertex-model-garden
 status: active
 supportedModes:
     - rerank

@@ -35,15 +35,22 @@ params:
       type: string
     - defaultValue: null
       key: reasoning_effort
+      supportedValues:
+          - none
+          - low
+          - medium
+          - high
       type: string
 removeParams:
     - temperature
     - top_p
     - "n"
     - max_tokens
+retirementDate: "2026-12-12"
 sources:
     - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models
 status: active
 supportedModes:
     - chat
+    - responses
 thinking: true

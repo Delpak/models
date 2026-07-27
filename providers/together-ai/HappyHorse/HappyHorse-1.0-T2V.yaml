@@ -1,0 +1,19 @@
+costs:
+    - output_cost_per_second_1080p: 0.24
+      region: "*"
+modalities:
+    input:
+        - text
+    output:
+        - video
+mode: video
+model: HappyHorse/HappyHorse-1.0-T2V
+provisioning: serverless
+removeParams:
+    - reasoning_effort
+sources:
+    - https://docs.together.ai/docs/changelog
+    - https://www.together.ai/models/happyhorse-1-0-t2v
+status: active
+supportedModes:
+    - video

@@ -1,5 +1,6 @@
 costs:
     - cache_creation_input_token_cost: 0.000004125
+      cache_creation_input_token_cost_per_hour: 0.0000066
       cache_read_input_token_cost: 3.3e-7
       input_cost_per_token: 0.0000033
       input_cost_per_token_batches: 0.00000165
@@ -19,7 +20,9 @@ costs:
           output:
               - cost_per_token: 0.00002475
                 from: 200000
+          pricing_mode: marginal
     - cache_creation_input_token_cost: 0.000004125
+      cache_creation_input_token_cost_per_hour: 0.0000066
       cache_read_input_token_cost: 3.3e-7
       input_cost_per_token: 0.0000033
       input_cost_per_token_batches: 0.00000165
@@ -41,6 +44,7 @@ costs:
                 from: 200000
           pricing_mode: marginal
     - cache_creation_input_token_cost: 0.000004125
+      cache_creation_input_token_cost_per_hour: 0.0000066
       cache_read_input_token_cost: 3.3e-7
       input_cost_per_token: 0.0000033
       input_cost_per_token_batches: 0.00000165
@@ -89,6 +93,7 @@ params:
 provisioning: serverless
 removeParams:
     - "n"
+    - reasoning_effort
 sources:
     - https://platform.claude.com/docs/en/about-claude/models
     - https://platform.claude.com/docs/en/about-claude/pricing

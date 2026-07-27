@@ -7,7 +7,6 @@ costs:
       input_cost_per_token: 0.000002
       output_cost_per_token: 0.000008
       region: "*"
-deprecationDate: "2026-10-16"
 features:
     - function_calling
     - tool_choice
@@ -41,7 +40,12 @@ params:
       type: string
     - defaultValue: medium
       key: reasoning_effort
+      supportedValues:
+          - low
+          - medium
+          - high
       type: string
+provisioning: serverless
 removeParams:
     - temperature
     - top_p
@@ -49,9 +53,9 @@ removeParams:
     - stream
     - max_tokens
     - parallel_tool_calls
-sources:
-    - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models
+retirementDate: "2026-10-16"
 status: active
 supportedModes:
     - chat
+    - responses
 thinking: true

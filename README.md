@@ -9,7 +9,7 @@ A comprehensive, community-maintained registry of AI/LLM model configurations. T
 
 LLM model configs change often — prices drop, features expand, limits shift. This repository provides up-to-date information across providers and makes updating stale data easy.
 
-- **Unified Schema** — Consistent model configuration format across 21 providers
+- **Unified Schema** — Consistent model configuration format across 23 providers
 - **Up-to-Date Pricing** — Current cost information for input/output tokens, batch processing, and caching
 - **Feature Tracking** — Know exactly what each model supports (vision, tools, structured output, etc.)
 - **Open Source** — Community-driven updates ensure accuracy and coverage
@@ -18,26 +18,28 @@ LLM model configs change often — prices drop, features expand, limits shift. T
 
 | Provider | Models | Description |
 |----------|--------|-------------|
-| OpenRouter | 756 | Unified API for open source models |
-| Google Vertex AI | 396 | Gemini, PaLM on GCP |
-| Together AI | 323 | Open source model hosting |
-| AWS Bedrock | 203 | Claude, Llama, Titan, Mistral on AWS |
-| Azure OpenAI | 188 | OpenAI models on Azure |
-| DeepInfra | 181 | Open source model hosting |
+| OpenRouter | 785 | Unified API for open source models |
+| Google Vertex AI | 409 | Gemini, PaLM on GCP |
+| Together AI | 363 | Open source model hosting |
+| DeepInfra | 231 | Open source model hosting |
+| AWS Bedrock | 212 | Claude, Llama, Titan, Mistral on AWS |
+| Azure OpenAI | 199 | OpenAI models on Azure |
 | Deepgram | 143 | Speech-to-text and text-to-speech models |
-| OpenAI | 138 | GPT-4, GPT-4o, GPT-5, o1, o3, DALL-E, Whisper, TTS |
-| Mistral AI | 84 | Mistral, Mixtral, Codestral |
-| xAI | 79 | Grok models |
-| Azure AI Foundry | 68 | Azure AI models |
-| Google Gemini | 66 | Gemini Pro, Ultra, Flash |
-| Cohere | 36 | Command, Embed models |
-| SambaNova | 29 | Enterprise AI models |
-| Databricks | 28 | Databricks-hosted models |
+| OpenAI | 141 | GPT-4, GPT-4o, GPT-5, o1, o3, DALL-E, Whisper, TTS |
+| Mistral AI | 96 | Mistral, Mixtral, Codestral |
+| xAI | 87 | Grok models |
+| Azure AI Foundry | 70 | Azure AI models |
+| Google Gemini | 70 | Gemini Pro, Ultra, Flash |
+| Aws Bedrock Mantle | 49 |  |
+| Cohere | 38 | Command, Embed models |
+| Databricks | 31 | Databricks-hosted models |
+| SambaNova | 30 | Enterprise AI models |
+| Anthropic | 25 | Claude 3, Claude 3.5, Claude 4 |
 | Perplexity | 24 | Search-augmented models |
-| Anthropic | 23 | Claude 3, Claude 3.5, Claude 4 |
-| Groq | 22 | Fast inference models |
+| Groq | 23 | Fast inference models |
 | AI21 | 12 | Jamba models |
 | ElevenLabs | 10 | Voice synthesis and text-to-speech models |
+| Wafer | 10 |  |
 | Cerebras | 5 | Fast inference models |
 
 ## Installation

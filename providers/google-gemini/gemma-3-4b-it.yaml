@@ -4,6 +4,7 @@ costs:
       region: "*"
 features:
     - system_messages
+    - function_calling
 limits:
     context_window: 128000
     max_input_tokens: 128000
@@ -22,7 +23,7 @@ params:
       key: max_tokens
       maxValue: 8192
       minValue: 1
-provisioning: serverless
+provisioning: provisioned
 sources:
     - https://ai.google.dev/gemma/docs/core
     - https://ai.google.dev/gemma/docs/core/model_card_3

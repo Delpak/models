@@ -8,8 +8,9 @@ modalities:
         - image
     output:
         - text
-mode: unknown
+mode: image
 model: google/face-detector
+provisioning: serverless
 removeParams:
     - max_tokens
     - temperature
@@ -21,3 +22,6 @@ removeParams:
 sources:
     - https://docs.cloud.google.com/vision/docs/detecting-faces
     - https://cloud.google.com/vision/pricing
+status: active
+supportedModes:
+    - image

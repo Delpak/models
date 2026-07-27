@@ -6,7 +6,6 @@ costs:
       region: us-central1
 features:
     - function_calling
-    - structured_output
     - system_messages
     - tool_choice
 limits:
@@ -16,6 +15,7 @@ limits:
 modalities:
     input:
         - text
+        - code
     output:
         - text
 mode: chat

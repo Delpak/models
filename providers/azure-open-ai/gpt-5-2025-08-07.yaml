@@ -35,11 +35,20 @@ model: gpt-5-2025-08-07
 params:
     - key: max_tokens
       maxValue: 128000
-    - key: reasoning_effort
+    - defaultValue: medium
+      key: reasoning_effort
+      supportedValues:
+          - minimal
+          - low
+          - medium
+          - high
       type: string
+provisioning: serverless
+retirementDate: "2027-02-06"
 sources:
     - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models
 status: active
 supportedModes:
     - chat
+    - responses
 thinking: true

@@ -7,8 +7,6 @@ costs:
       region: "*"
 features:
     - prompt_caching
-limits:
-    max_tokens: 4096
 modalities:
     input:
         - text
@@ -18,17 +16,19 @@ modalities:
         - image
 mode: image
 model: gpt-image-1.5-2025-12-16
+provisioning: serverless
 removeParams:
     - tool_choice
     - parallel_tool_calls
     - stop
     - top_p
     - stream
+retirementDate: "2026-12-16"
 sources:
     - https://developers.openai.com/docs/pricing
     - https://developers.openai.com/docs/guides/image-generation
     - https://developers.openai.com/docs/models/gpt-image-1.5
-    - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models
+    - https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/dall-e
 status: active
 supportedModes:
     - image

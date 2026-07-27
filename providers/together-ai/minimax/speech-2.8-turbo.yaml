@@ -1,0 +1,18 @@
+costs:
+    - input_cost_per_character: 3e-5 # $30 / 1M characters (plus GPU hourly by hardware, not captured)
+      region: "*"
+modalities:
+    input:
+        - text
+    output:
+        - audio
+mode: text_to_speech
+model: minimax/speech-2.8-turbo
+provisioning: provisioned
+removeParams:
+    - reasoning_effort
+sources:
+    - https://www.together.ai/models/minimax-speech-28
+status: active
+supportedModes:
+    - text_to_speech

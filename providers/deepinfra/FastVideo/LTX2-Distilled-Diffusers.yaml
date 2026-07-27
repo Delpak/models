@@ -1,0 +1,23 @@
+costs:
+    - output_cost_per_second: 0.036
+      region: "*"
+deprecationDate: "2026-06-24"
+isDeprecated: true
+modalities:
+    input:
+        - text
+        - image
+        - audio
+    output:
+        - video
+        - audio
+mode: video
+model: FastVideo/LTX2-Distilled-Diffusers
+provisioning: serverless
+removeParams:
+    - reasoning_effort
+sources:
+    - https://deepinfra.com/FastVideo/LTX2-Distilled-Diffusers
+status: deprecated
+supportedModes:
+    - video

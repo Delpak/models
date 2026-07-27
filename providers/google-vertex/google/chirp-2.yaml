@@ -1,3 +1,10 @@
+costs:
+    - input_cost_per_second: 0.0002666666666666667
+      region: us-central1
+    - input_cost_per_second: 0.0002666666666666667
+      region: europe-west4
+    - input_cost_per_second: 0.0002666666666666667
+      region: asia-southeast1
 modalities:
     input:
         - audio
@@ -5,6 +12,7 @@ modalities:
         - text
 mode: audio_transcription
 model: google/chirp-2
+provisioning: serverless
 removeParams:
     - max_tokens
     - temperature
@@ -16,6 +24,9 @@ removeParams:
 sources:
     - https://docs.cloud.google.com/speech-to-text/v2/docs/transcription-model
     - https://docs.cloud.google.com/speech-to-text/v2/docs/speech-to-text-supported-languages
+    - https://docs.cloud.google.com/speech-to-text/docs/models/chirp-2
+    - https://cloud.google.com/speech-to-text/pricing
 status: active
 supportedModes:
     - audio_transcription
+    - audio_translation

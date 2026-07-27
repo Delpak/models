@@ -8,12 +8,15 @@ features:
     - structured_output
     - json_output
     - tool_choice
+    - system_messages
 limits:
     context_window: 262144
 modalities:
     input:
         - text
         - image
+        - doc
+        - pdf
     output:
         - text
 mode: chat
@@ -22,6 +25,8 @@ params:
     - defaultValue: 0.3
       key: temperature
 provisioning: serverless
+removeParams:
+    - reasoning_effort
 sources:
     - https://docs.mistral.ai/models/ministral-3-8b-25-12
     - https://docs.mistral.ai/capabilities/vision

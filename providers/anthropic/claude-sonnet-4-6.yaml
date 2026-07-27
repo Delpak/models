@@ -18,9 +18,9 @@ features:
     - system_messages
 limits:
     context_window: 1000000
-    max_output_tokens: 64000
-    max_tokens: 64000
-    tool_use_system_prompt_tokens: 346
+    max_output_tokens: 128000
+    max_tokens: 128000
+    tool_use_system_prompt_tokens: 497
 modalities:
     input:
         - text
@@ -33,8 +33,16 @@ model: claude-sonnet-4-6
 params:
     - defaultValue: 256
       key: max_tokens
-      maxValue: 64000
+      maxValue: 128000
       minValue: 1
+    - defaultValue: high
+      key: reasoning_effort
+      supportedValues:
+          - low
+          - medium
+          - high
+          - max
+      type: string
 provisioning: serverless
 status: active
 supportedModes:

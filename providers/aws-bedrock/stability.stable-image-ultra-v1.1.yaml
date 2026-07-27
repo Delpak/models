@@ -16,11 +16,13 @@ removeParams:
     - max_tokens
     - temperature
     - top_p
-    - "n"
+    - n
     - stop
     - stream
+    - reasoning_effort
 sources:
     - https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-diffusion-stable-ultra-text-image-request-response.html
+    - https://aws.amazon.com/marketplace/pp/prodview-gdmhnjqeccs7s
 status: active
 supportedModes:
     - image

@@ -4,12 +4,8 @@ costs:
       output_cost_per_second: 0.00025
       output_cost_per_token: 0.00001
       region: "*"
-deprecationDate: "2026-06-01"
 limits:
-    context_window: 128000
-    max_input_tokens: 128000
-    max_output_tokens: 16384
-    max_tokens: 16384
+    max_input_tokens: 2000
 modalities:
     input:
         - text
@@ -17,6 +13,7 @@ modalities:
         - audio
 mode: text_to_speech
 model: gpt-4o-mini-tts-2025-03-20
+provisioning: serverless
 removeParams:
     - temperature
     - top_p
@@ -25,8 +22,10 @@ removeParams:
     - response_format
     - tool_choice
     - parallel_tool_calls
+retirementDate: "2026-10-15"
 sources:
     - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models
+    - https://developers.openai.com/api/docs/models/gpt-4o-mini-tts
 status: preview
 supportedModes:
     - text_to_speech

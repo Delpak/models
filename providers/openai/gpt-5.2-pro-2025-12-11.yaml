@@ -8,7 +8,6 @@ features:
     - function_calling
     - tool_choice
     - system_messages
-    - prompt_caching
 limits:
     context_window: 400000
     max_output_tokens: 128000
@@ -28,6 +27,11 @@ params:
       minValue: 1
     - defaultValue: high
       key: reasoning_effort
+      supportedValues:
+          - medium
+          - high
+          - xhigh
+      type: string
 provisioning: serverless
 removeParams:
     - max_tokens

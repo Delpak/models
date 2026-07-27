@@ -8,6 +8,8 @@ features:
     - system_messages
 limits:
     context_window: 262144
+    max_output_tokens: 16384
+    max_tokens: 16384
 messages:
     options:
         - system
@@ -22,6 +24,8 @@ modalities:
 mode: chat
 model: Qwen/Qwen3-4B-Instruct-2507
 provisioning: provisioned
+removeParams:
+    - reasoning_effort
 sources:
     - https://www.together.ai/models/qwen3-4b
     - https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507

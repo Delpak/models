@@ -1,0 +1,22 @@
+costs:
+    - output_cost_per_image: 0.053
+      region: "*"
+modalities:
+    input:
+        - text
+        - image
+    output:
+        - image
+mode: image
+model: openai/gpt-image-2
+provisioning: serverless
+removeParams:
+    - reasoning_effort
+sources:
+    - https://docs.together.ai/docs/serverless-models
+    - https://www.together.ai/pricing
+    - https://www.together.ai/models/gpt-image-2
+    - https://developers.openai.com/api/docs/models/gpt-image-2
+status: active
+supportedModes:
+    - image

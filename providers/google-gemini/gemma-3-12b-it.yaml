@@ -4,7 +4,6 @@ costs:
       region: "*"
 features:
     - system_messages
-    - tool_choice
 limits:
     context_window: 128000
     max_input_tokens: 128000
@@ -21,7 +20,7 @@ model: gemma-3-12b-it
 params:
     - key: max_tokens
       maxValue: 8192
-provisioning: serverless
+provisioning: provisioned
 sources:
     - https://huggingface.co/google/gemma-3-12b-it
     - https://ai.google.dev/gemma/docs/core/model_card_3

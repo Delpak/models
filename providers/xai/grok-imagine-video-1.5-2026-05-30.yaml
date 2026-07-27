@@ -1,0 +1,24 @@
+costs:
+    - output_cost_per_second: 0.08
+      region: "*"
+modalities:
+    input:
+        - image
+    output:
+        - video
+mode: video
+model: grok-imagine-video-1.5-2026-05-30
+provisioning: serverless
+removeParams:
+    - max_tokens
+    - temperature
+    - top_p
+    - "n"
+    - stop
+    - stream
+    - reasoning_effort
+sources:
+    - https://docs.x.ai/developers/models/grok-imagine-video-1.5-preview
+status: preview
+supportedModes:
+    - video

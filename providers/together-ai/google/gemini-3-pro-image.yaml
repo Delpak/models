@@ -12,6 +12,7 @@ modalities:
         - image
     output:
         - image
+        - text
 mode: image
 model: google/gemini-3-pro-image
 provisioning: serverless

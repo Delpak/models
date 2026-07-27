@@ -1,24 +1,26 @@
 costs:
-    - input_cost_per_token: 2e-7
-      output_cost_per_token: 3.5e-7
+    - input_cost_per_token: 3.5e-7
+      output_cost_per_token: 5.9e-7
       region: "*"
+deprecationDate: "2026-06-09"
 features:
     - system_messages
+isDeprecated: true
 limits:
-    context_window: 131072
-    max_output_tokens: 8192
-    max_tokens: 8192
+    context_window: 128000
 modalities:
     input:
         - text
+        - image
     output:
         - text
 mode: chat
 model: gemma-3-12b-it
 provisioning: serverless
+retirementDate: "2026-06-09"
 sources:
     - https://docs.sambanova.ai/docs/en/features/function-calling
     - https://docs.sambanova.ai/docs/en/features/vision
-status: active
+status: retired
 supportedModes:
     - chat

@@ -6,13 +6,14 @@ costs:
 modalities:
     input:
         - text
+        - image
     output:
         - video
 mode: video
 model: vidu/vidu-q3-turbo
 provisioning: serverless
-sources:
-    - https://docs.together.ai/docs/serverless-models
+removeParams:
+    - reasoning_effort
 status: active
 supportedModes:
     - video

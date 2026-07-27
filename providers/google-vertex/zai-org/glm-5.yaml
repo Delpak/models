@@ -1,6 +1,8 @@
+# costs: not found in official docs — Vertex AI pricing page does not list zai-org/glm-5
 features:
     - function_calling
     - structured_output
+    - prompt_caching
 limits:
     context_window: 200000
     max_output_tokens: 128000
@@ -8,7 +10,6 @@ limits:
 modalities:
     input:
         - text
-        - doc
     output:
         - text
 mode: chat
@@ -16,10 +17,14 @@ model: zai-org/glm-5
 params:
     - key: max_tokens
       maxValue: 128000
-provisioning: provisioned
+provisioning: serverless
 sources:
     - https://docs.cloud.google.com/vertex-ai/generative-ai/docs/maas/zaiorg/glm-5
     - https://docs.cloud.google.com/vertex-ai/generative-ai/docs/maas/zaiorg
+    - https://docs.cloud.google.com/vertex-ai/generative-ai/docs/provisioned-throughput/supported-models
+    - https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes
+    - https://docs.z.ai/guides/llm/glm-5
 status: active
 supportedModes:
     - chat
+thinking: true

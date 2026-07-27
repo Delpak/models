@@ -19,12 +19,19 @@ modalities:
         - text
 mode: chat
 model: gemma-3n-e4b-it
-provisioning: serverless
+params:
+    - defaultValue: 256
+      key: max_tokens
+      maxValue: 32000
+      minValue: 1
+provisioning: provisioned
 removeParams:
     - tool_choice
+    - reasoning_effort
 sources:
     - https://ai.google.dev/gemma/docs/3n
     - https://ai.google.dev/gemma/docs/gemma-3n/model_card
+    - https://huggingface.co/google/gemma-3n-E4B-it
 status: active
 supportedModes:
     - chat

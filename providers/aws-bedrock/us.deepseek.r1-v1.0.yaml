@@ -13,8 +13,8 @@ features:
 limits:
     context_window: 128000
     max_input_tokens: 128000
-    max_output_tokens: 32768
-    max_tokens: 32768
+    max_output_tokens: 8192
+    max_tokens: 8192
 modalities:
     input:
         - text
@@ -25,11 +25,12 @@ model: us.deepseek.r1-v1:0
 params:
     - defaultValue: 512
       key: max_tokens
-      maxValue: 32768
+      maxValue: 8192
       minValue: 1
 provisioning: serverless
 removeParams:
     - "n"
+    - reasoning_effort
 sources:
     - https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-deepseek.html
     - https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html

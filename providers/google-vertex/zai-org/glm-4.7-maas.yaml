@@ -9,6 +9,7 @@ features:
     - system_messages
     - tool_choice
     - json_output
+    - prompt_caching
 limits:
     context_window: 200000
     max_output_tokens: 128000
@@ -16,7 +17,6 @@ limits:
 modalities:
     input:
         - text
-        - doc
     output:
         - text
 mode: chat
@@ -33,4 +33,3 @@ sources:
 status: active
 supportedModes:
     - chat
-thinking: true

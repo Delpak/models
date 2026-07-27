@@ -9,7 +9,8 @@ package model
 	key:           #ModelParamKey
 	maxValue?:     number
 	minValue?:     number
-	type?:         #ModelParamType
+	supportedValues?: [...string]
+	type?: #ModelParamType
 }
 
 #ModelParamKey:
@@ -43,6 +44,18 @@ package model
 // Section 2: Default provider config
 // ============================================================
 
+// Pricing per billing unit; value is the cost
+#ToolCost: {
+	// pricing in USD
+	per_request?:           number & >= 0
+	per_thousand_requests?: number & >= 0
+}
+
+// Pricing for built-in tools that can incur usage-based pricing beyond token costs
+#ToolPricing: {
+	web_search?: #ToolCost
+}
+
 // Schema for default.yaml files (provider-level defaults)
 #DefaultConfig: {
 	// Official documentation links for models, pricing, and deprecations
@@ -51,6 +64,8 @@ package model
 	messages?: #MessageConfig
 	// Configurable parameters with defaults
 	params?: [...#ModelParam]
+	// Pricing for built-in tools
+	tool_pricing?: #ToolPricing
 }
 
 // ============================================================
@@ -140,6 +155,7 @@ package model
 #CostWithRegion: {
 	region: "*" | #AWSRegion | #GCPRegion | #AzureRegion | #VertexRegion
 	#Cost
+	priority_pricing?: #Cost
 }
 
 // Supported feature flags a model can declare
@@ -242,11 +258,13 @@ package model
 	"embedding" |
 	"image" |
 	"moderation" |
+	"ocr" |
 	"realtime" |
 	"rerank" |
 	"responses" |
 	"text_to_speech" |
 	"unknown" |
+	"unsupported" | // Model is not supported by the gateway
 	"video"
 
 #ModelConfig: {
@@ -276,6 +294,8 @@ package model
 	removeParams?: [...#ModelParamKey]
 	// Param keys that must always be provided by callers
 	requiredParams?: [...#ModelParamKey]
+	// Retirement date of the model (YYYY-MM-DD)
+	retirementDate?: string & =~"^\\d{4}-\\d{2}-\\d{2}$"
 	// Documentation or pricing source URLs
 	sources?: [...string]
 	// Lifecycle status of the model
@@ -306,9 +326,9 @@ package model
 // Lifecycle status of a model
 #Status:
 	"active" |      // Model is fully supported and recommended for use (aka stable, ga)
-	"deprecated" |  // Model is deprecated and may be removed in the future (aka sunset, end-of-life)
+	"deprecated" |  // Model is deprecated and may be removed in the future (aka legacy)
 	"preview" |     // Model is in early access and may change or have limited support (aka beta, experimental)
-	"retired"       // Model has been fully removed and is no longer accessible (aka removed, deleted)
+	"retired"       // Model has been fully removed and is no longer accessible (aka removed, deleted, end-of-life)
 
 #TieredPricing: {
 	cache_read?:  [...#PricingTier]

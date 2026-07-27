@@ -6,10 +6,10 @@ costs:
 features:
     - function_calling
     - parallel_function_calling
+    - prompt_caching
+    - structured_output
     - system_messages
     - tool_choice
-    - structured_output
-    - prompt_caching
 limits:
     context_window: 400000
     max_input_tokens: 272000
@@ -31,10 +31,13 @@ params:
       minValue: 1
     - defaultValue: medium
       key: reasoning_effort
+      supportedValues:
+          - low
+          - medium
+          - high
       type: string
-sources:
-    - https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure
-    - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-retirements
+provisioning: serverless
+retirementDate: "2027-02-25"
 status: active
 supportedModes:
     - responses

@@ -6,6 +6,7 @@ features:
     - function_calling
     - structured_output
     - assistant_prefill
+isDeprecated: true
 limits:
     context_window: 196608
 modalities:
@@ -16,13 +17,13 @@ modalities:
     output:
         - text
         - code
-mode: chat
+mode: unsupported # Experimental Mistral Labs model; not generally available
 model: labs-leanstral-2603
 params:
     - defaultValue: 1
       key: temperature
 sources:
     - https://docs.mistral.ai/models/leanstral-26-03
-status: preview
+status: deprecated
 supportedModes:
     - chat

@@ -1,3 +1,4 @@
+isDeprecated: true
 modalities:
     input:
         - image
@@ -5,11 +6,18 @@ modalities:
         - text
 mode: unknown
 model: google/imageclassification-proprietary-efficientnet
+provisioning: provisioned
 removeParams:
     - max_tokens
     - temperature
     - top_p
-    - "n"
+    - n
     - stop
     - stream
     - tool_choice
+sources:
+    - https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/imageclassification-proprietary-efficientnet
+    - https://github.com/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/community/model_garden/model_garden_proprietary_image_classification.ipynb
+status: deprecated
+supportedModes:
+    - unknown

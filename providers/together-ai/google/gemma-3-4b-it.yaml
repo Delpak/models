@@ -1,7 +1,7 @@
 features:
     - function_calling
 limits:
-    context_window: 64000
+    context_window: 65536
 modalities:
     input:
         - text
@@ -11,6 +11,8 @@ modalities:
 mode: chat
 model: google/gemma-3-4b-it
 provisioning: provisioned
+removeParams:
+    - reasoning_effort
 sources:
     - https://www.together.ai/models/gemma-3-4b
     - https://docs.together.ai/docs/fine-tuning-models

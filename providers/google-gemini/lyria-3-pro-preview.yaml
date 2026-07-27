@@ -8,7 +8,7 @@ modalities:
     output:
         - audio
         - text
-mode: text_to_speech
+mode: unsupported # Music generation model
 model: lyria-3-pro-preview
 params:
     - defaultValue: 1
@@ -23,6 +23,7 @@ removeParams:
     - max_tokens
     - stop
     - tool_choice
+    - reasoning_effort
 sources:
     - https://ai.google.dev/gemini-api/docs/music-generation
 status: preview

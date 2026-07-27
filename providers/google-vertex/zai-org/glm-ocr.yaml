@@ -1,6 +1,9 @@
 features:
     - structured_output
     - json_output
+limits:
+    max_output_tokens: 8192
+    max_tokens: 8192
 modalities:
     input:
         - text
@@ -10,7 +13,11 @@ modalities:
         - text
 mode: chat
 model: zai-org/glm-ocr
+provisioning: provisioned
 sources:
-    - https://huggingface.co/zai-org/glm-ocr
+    - https://huggingface.co/zai-org/GLM-OCR
+    - https://docs.z.ai/guides/vlm/glm-ocr
+    - https://github.com/zai-org/GLM-OCR
+status: active
 supportedModes:
     - chat

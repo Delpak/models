@@ -31,6 +31,10 @@ costs:
       region: ap-northeast-1
 features:
     - function_calling
+    - tool_choice
+    - structured_output
+    - json_output
+    - system_messages
 limits:
     context_window: 128000
     max_input_tokens: 128000
@@ -54,6 +58,13 @@ params:
       key: max_tokens
       maxValue: 16000
       minValue: 1
+    - defaultValue: medium
+      key: reasoning_effort
+      supportedValues:
+          - low
+          - medium
+          - high
+      type: string
 provisioning: serverless
 sources:
     - https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-oss-safeguard-120b.html
@@ -61,3 +72,4 @@ sources:
 status: active
 supportedModes:
     - chat
+thinking: true

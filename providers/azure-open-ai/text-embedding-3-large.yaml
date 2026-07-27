@@ -12,6 +12,7 @@ modalities:
         - embedding
 mode: embedding
 model: text-embedding-3-large
+provisioning: serverless
 removeParams:
     - temperature
     - top_p
@@ -22,6 +23,8 @@ removeParams:
     - tool_choice
     - parallel_tool_calls
     - max_tokens
+    - reasoning_effort
+retirementDate: "2027-04-15"
 status: active
 supportedModes:
     - embedding

@@ -41,13 +41,21 @@ params:
       key: verbosity
     - defaultValue: null
       key: reasoning
+    - defaultValue: medium
+      key: reasoning_effort
+      supportedValues:
+          - minimal
+          - low
+          - medium
+          - high
+      type: string
+provisioning: serverless
 removeParams:
     - temperature
     - top_p
     - "n"
     - max_tokens
-sources:
-    - https://raw.githubusercontent.com/BerriAI/litellm/refs/heads/main/model_prices_and_context_window.json
+retirementDate: "2027-02-06"
 status: active
 supportedModes:
     - chat

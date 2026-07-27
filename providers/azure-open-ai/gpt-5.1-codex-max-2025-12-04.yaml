@@ -6,9 +6,9 @@ costs:
 features:
     - function_calling
     - parallel_function_calling
+    - prompt_caching
     - structured_output
     - tool_choice
-    - prompt_caching
 limits:
     context_window: 400000
     max_input_tokens: 272000
@@ -23,20 +23,30 @@ modalities:
     input:
         - text
         - image
+        - pdf
     output:
         - text
-mode: chat
+mode: responses
 model: gpt-5.1-codex-max-2025-12-04
 params:
     - defaultValue: 128000
       key: max_tokens
       maxValue: 128000
       minValue: 1
-    - key: reasoning_effort
+    - defaultValue: medium
+      key: reasoning_effort
+      supportedValues:
+          - none
+          - low
+          - medium
+          - high
+          - xhigh
       type: string
+provisioning: serverless
+retirementDate: "2026-12-05"
 sources:
     - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models
 status: active
 supportedModes:
-    - chat
+    - responses
 thinking: true

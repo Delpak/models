@@ -59,6 +59,7 @@ costs:
       region: asia-east2
     - output_cost_per_image: 0.04
       region: asia-east1
+isDeprecated: true
 modalities:
     input:
         - text
@@ -66,6 +67,7 @@ modalities:
         - image
 mode: image
 model: imagen-4.0-generate-001
+provisioning: serverless
 removeParams:
     - max_tokens
     - temperature
@@ -74,10 +76,11 @@ removeParams:
     - stop
     - stream
     - tool_choice
+retirementDate: "2026-06-30"
 sources:
     - https://docs.cloud.google.com/vertex-ai/generative-ai/docs/image/overview
     - https://docs.cloud.google.com/vertex-ai/generative-ai/docs/image/generate-images
-    - https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/locations
-status: active
+    - https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/4-0-generate
+status: deprecated
 supportedModes:
     - image

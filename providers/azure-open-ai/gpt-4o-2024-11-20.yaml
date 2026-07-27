@@ -1,13 +1,20 @@
 costs:
-    - cache_read_input_token_cost: 0.00000125
-      input_cost_per_token: 0.0000025
-      output_cost_per_token: 0.00001
+    - cache_read_input_token_cost: 1.25e-6
+      input_cost_per_token: 2.5e-6
+      output_cost_per_token: 1e-5
       region: global
-    - cache_creation_input_token_cost: 0.00000138
-      input_cost_per_token: 0.00000275
-      output_cost_per_token: 0.000011
+    - cache_creation_input_token_cost: 1.38e-6
+      input_cost_per_token: 2.75e-6
+      output_cost_per_token: 1.1e-5
+      region: datazone_us
+    - cache_creation_input_token_cost: 1.38e-6
+      input_cost_per_token: 2.75e-6
+      output_cost_per_token: 1.1e-5
       region: datazone_eu
-deprecationDate: "2026-10-01"
+    - cache_read_input_token_cost: 1.25e-6
+      input_cost_per_token: 2.75e-6
+      output_cost_per_token: 1.1e-5
+      region: "*"
 features:
     - function_calling
     - parallel_function_calling
@@ -31,6 +38,10 @@ model: gpt-4o-2024-11-20
 params:
     - key: max_tokens
       maxValue: 16384
+provisioning: serverless
+removeParams:
+    - reasoning_effort
+retirementDate: "2026-10-01"
 sources:
     - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models
 status: active

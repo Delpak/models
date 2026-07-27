@@ -5,9 +5,9 @@ costs:
       region: "*"
 features:
     - function_calling
-    - structured_output
     - json_output
     - prompt_caching
+    - structured_output
 limits:
     context_window: 228700
 modalities:
@@ -18,6 +18,8 @@ modalities:
 mode: chat
 model: MiniMaxAI/MiniMax-M2.7
 provisioning: serverless
+removeParams:
+    - reasoning_effort
 sources:
     - https://www.together.ai/models/minimax-m2-7
 status: active

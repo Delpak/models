@@ -22,7 +22,6 @@ modalities:
     input:
         - text
         - image
-        - pdf
     output:
         - text
 mode: chat
@@ -38,6 +37,7 @@ params:
 provisioning: serverless
 removeParams:
     - max_tokens
+    - reasoning_effort
 sources:
     - https://developers.openai.com/api/docs/models/gpt-4.1-mini
 status: active

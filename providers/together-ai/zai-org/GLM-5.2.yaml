@@ -1,0 +1,34 @@
+costs:
+    - cache_read_input_token_cost: 2.6e-7
+      input_cost_per_token: 1.4e-6
+      output_cost_per_token: 4.4e-6
+      region: "*"
+features:
+    - function_calling
+    - json_output
+    - structured_output
+limits:
+    context_window: 262144
+    max_output_tokens: 131072
+    max_tokens: 131072
+modalities:
+    input:
+        - text
+    output:
+        - text
+mode: chat
+model: zai-org/GLM-5.2
+params:
+    - defaultValue: max
+      key: reasoning_effort
+      supportedValues:
+          - high
+          - max
+      type: string
+provisioning: serverless
+sources:
+    - https://www.together.ai/models/glm-52
+status: active
+supportedModes:
+    - chat
+thinking: true

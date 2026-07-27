@@ -43,9 +43,13 @@ params:
       key: min_tokens
       maxValue: 8192
       minValue: 0
+    - defaultValue: null
+      key: seed
+      type: number
 provisioning: serverless
 removeParams:
     - "n"
+    - reasoning_effort
 sources:
     - https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-writer-palmyra-x4.html
     - https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-palmyra-x4.html

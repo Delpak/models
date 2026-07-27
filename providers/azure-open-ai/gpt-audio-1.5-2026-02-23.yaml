@@ -26,6 +26,10 @@ model: gpt-audio-1.5-2026-02-23
 params:
     - key: max_tokens
       maxValue: 16384
+provisioning: serverless
+removeParams:
+    - reasoning_effort
+retirementDate: "2027-02-23"
 sources:
     - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models
 status: active

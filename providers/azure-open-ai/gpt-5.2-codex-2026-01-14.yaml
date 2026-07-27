@@ -3,7 +3,6 @@ costs:
       input_cost_per_token: 0.00000175
       output_cost_per_token: 0.000014
       region: "*"
-deprecationDate: "2027-07-14"
 features:
     - function_calling
     - parallel_function_calling
@@ -30,9 +29,8 @@ params:
       key: max_tokens
       maxValue: 128000
       minValue: 1
-sources:
-    - https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-retirements
-    - https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure
+provisioning: serverless
+retirementDate: "2027-01-14"
 status: active
 supportedModes:
     - responses

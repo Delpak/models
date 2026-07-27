@@ -6,7 +6,7 @@ costs:
       output_cost_per_token: 0
       region: "*"
 limits:
-    max_input_tokens: 8192
+    max_input_tokens: 8191
     output_vector_size: 1536
 modalities:
     input:
@@ -15,16 +15,19 @@ modalities:
         - embedding
 mode: embedding
 model: text-embedding-3-small
+provisioning: serverless
 removeParams:
     - temperature
     - top_p
     - stop
-    - "n"
+    - n
     - response_format
     - stream
     - tool_choice
     - parallel_tool_calls
     - max_tokens
+    - reasoning_effort
+retirementDate: "2027-04-15"
 status: active
 supportedModes:
     - embedding

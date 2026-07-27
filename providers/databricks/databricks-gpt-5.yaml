@@ -1,5 +1,6 @@
 costs:
-    - cache_read_input_token_cost: 1.25e-7
+    - cache_creation_input_token_cost: 0.00000125
+      cache_read_input_token_cost: 1.25e-7
       input_cost_per_token: 0.00000125
       output_cost_per_token: 0.00001
       region: "*"
@@ -10,6 +11,7 @@ features:
     - tool_choice
     - structured_output
     - prompt_caching
+    - json_output
 limits:
     context_window: 400000
     max_output_tokens: 128000
@@ -27,6 +29,15 @@ modalities:
         - text
 mode: chat
 model: databricks-gpt-5
+params:
+    - defaultValue: minimal
+      key: reasoning_effort
+      supportedValues:
+          - minimal
+          - low
+          - medium
+          - high
+      type: string
 provisioning: serverless
 sources:
     - https://docs.databricks.com/aws/en/machine-learning/foundation-model-apis/api-reference

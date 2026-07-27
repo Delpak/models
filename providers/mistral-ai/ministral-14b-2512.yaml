@@ -6,12 +6,14 @@ features:
     - function_calling
     - json_output
     - structured_output
+    - assistant_prefill
 limits:
     context_window: 262144
 modalities:
     input:
         - text
         - image
+        - doc
     output:
         - text
 mode: chat
@@ -20,6 +22,8 @@ params:
     - defaultValue: 0.3
       key: temperature
 provisioning: serverless
+removeParams:
+    - reasoning_effort
 sources:
     - https://docs.mistral.ai/models/ministral-3-14b-25-12
 status: active
