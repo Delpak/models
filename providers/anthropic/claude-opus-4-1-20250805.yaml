@@ -8,6 +8,7 @@ costs:
       output_cost_per_token_batches: 3.75e-5
       region: "*"
 deprecationDate: "2026-06-05"
+replacementModel: claude-opus-4-6
 features:
     - function_calling
     - parallel_function_calling
@@ -46,3 +47,29 @@ status: deprecated
 supportedModes:
     - chat
 thinking: true
+runtimeProfile:
+    version: 1
+    endpoints: [messages, count_tokens, message_batches, files, models]
+    thinking:
+        defaultMode: manual
+        allowedModes: [manual, disabled]
+        manualDeprecated: false
+        effortValues: []
+    assistantPrefill: true
+    sampling:
+        parameters: [temperature, top_p, top_k]
+        disallowedWithThinking: [temperature, top_p, top_k]
+    tools:
+        custom: true
+        parallel: true
+        structuredOutput: false
+    modalities:
+        input: [text, image, pdf]
+        output: [text]
+    betaHeaders: [files-api-2025-04-14]
+    limits:
+        contextWindow: 200000
+        maxOutputTokens: 32000
+        messagesBytes: 33554432
+        batchBytes: 268435456
+        fileBytes: 524288000

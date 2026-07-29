@@ -4,6 +4,7 @@ documentation:
     - https://platform.claude.com/docs/en/about-claude/models/overview
     - https://platform.claude.com/docs/en/about-claude/model-deprecations
     - https://platform.claude.com/docs/en/build-with-claude/effort
+    - https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool
 messages:
     options:
         - system
@@ -46,3 +47,7 @@ params:
 tool_pricing:
     web_search:
         per_thousand_requests: 10
+    code_execution:
+        per_container_hour: 0.05
+        free_organization_hours_per_month: 1550
+        minimum_minutes: 5

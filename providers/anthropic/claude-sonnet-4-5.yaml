@@ -46,3 +46,29 @@ status: active
 supportedModes:
     - chat
 thinking: true
+runtimeProfile:
+    version: 1
+    endpoints: [messages, count_tokens, message_batches, files, models]
+    thinking:
+        defaultMode: manual
+        allowedModes: [manual, disabled]
+        manualDeprecated: false
+        effortValues: []
+    assistantPrefill: true
+    sampling:
+        parameters: [temperature, top_p, top_k]
+        disallowedWithThinking: [temperature, top_p, top_k]
+    tools:
+        custom: true
+        parallel: true
+        structuredOutput: true
+    modalities:
+        input: [text, image, pdf]
+        output: [text]
+    betaHeaders: [files-api-2025-04-14]
+    limits:
+        contextWindow: 200000
+        maxOutputTokens: 64000
+        messagesBytes: 33554432
+        batchBytes: 268435456
+        fileBytes: 524288000

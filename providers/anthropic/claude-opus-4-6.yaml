@@ -14,7 +14,6 @@ features:
     - prompt_caching
     - structured_output
     - cache_control
-    - assistant_prefill
     - system_messages
 limits:
     context_window: 1000000
@@ -48,3 +47,33 @@ status: active
 supportedModes:
     - chat
 thinking: true
+runtimeProfile:
+    version: 1
+    endpoints: [messages, count_tokens, message_batches, files, models]
+    thinking:
+        defaultMode: adaptive
+        allowedModes: [adaptive, manual, disabled]
+        manualDeprecated: true
+        effortValues: [low, medium, high, max]
+    assistantPrefill: false
+    sampling:
+        parameters: [temperature, top_p, top_k]
+        disallowedWithThinking: [temperature, top_p, top_k]
+    tools:
+        custom: true
+        parallel: true
+        structuredOutput: true
+    modalities:
+        input: [text, image, pdf]
+        output: [text]
+    requestControls:
+        serviceTierValues: [auto, standard_only]
+        inferenceGeoValues: [global, us]
+        speedValues: [standard, fast]
+    betaHeaders: [files-api-2025-04-14]
+    limits:
+        contextWindow: 1000000
+        maxOutputTokens: 128000
+        messagesBytes: 33554432
+        batchBytes: 268435456
+        fileBytes: 524288000
