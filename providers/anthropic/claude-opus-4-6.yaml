@@ -61,6 +61,7 @@ runtimeProfile:
         disallowedWithThinking: [temperature, top_p, top_k]
     tools:
         custom: true
+        server: true
         parallel: true
         structuredOutput: true
     modalities:
@@ -70,7 +71,14 @@ runtimeProfile:
         serviceTierValues: [auto, standard_only]
         inferenceGeoValues: [global, us]
         speedValues: [standard, fast]
-    betaHeaders: [files-api-2025-04-14]
+        effectiveSpeed:
+            standard: standard
+            fast: standard
+    betaHeaders: [files-api-2025-04-14, output-300k-2026-03-24]
+    betaCapabilities:
+        - header: output-300k-2026-03-24
+          endpoints: [message_batches]
+          maxOutputTokens: 300000
     limits:
         contextWindow: 1000000
         maxOutputTokens: 128000

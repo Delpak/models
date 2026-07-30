@@ -61,6 +61,7 @@ runtimeProfile:
         disallowedWithThinking: [temperature, top_p, top_k]
     tools:
         custom: true
+        server: true
         parallel: true
         structuredOutput: false
     modalities:

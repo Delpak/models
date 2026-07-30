@@ -2,8 +2,18 @@ costs:
     - cache_read_input_token_cost: 2.5e-7
       input_cost_per_token: 0.0000025
       input_cost_per_token_batches: 0.00000125
+      cache_read_input_token_cost_batches: 1.3e-7
+      input_cost_per_token_flex: 0.00000125
+      output_cost_per_token_flex: 0.0000075
+      cache_read_input_token_cost_flex: 1.3e-7
       output_cost_per_token: 0.000015
       output_cost_per_token_batches: 0.0000075
+      input_cost_per_token_batches_above_272k_tokens: 0.0000025
+      output_cost_per_token_batches_above_272k_tokens: 0.00001125
+      cache_read_input_token_cost_batches_above_272k_tokens: 2.5e-7
+      input_cost_per_token_flex_above_272k_tokens: 0.0000025
+      output_cost_per_token_flex_above_272k_tokens: 0.00001125
+      cache_read_input_token_cost_flex_above_272k_tokens: 2.5e-7
       priority_pricing:
           cache_read_input_token_cost: 5e-7
           input_cost_per_token: 0.000005
@@ -28,6 +38,24 @@ features:
     - structured_output
     - prompt_caching
     - json_output
+tools:
+    - function_calling
+    - web_search
+    - file_search
+    - tool_search
+    - image_generation
+    - code_interpreter
+    - hosted_shell
+    - apply_patch
+    - skills
+    - computer_use
+    - mcp
+serviceTiers:
+    - standard
+    - batch
+    - flex
+    - priority
+    - fast
 limits:
     context_window: 1050000
     max_output_tokens: 128000
@@ -62,4 +90,5 @@ sources:
 status: active
 supportedModes:
     - chat
+    - responses
 thinking: true
